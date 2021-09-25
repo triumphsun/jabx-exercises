@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+application {
+    mainClassName 'com.suntri.jaxb.Application'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["src/main/java", "src/generated/java"]
+        }
+    }
+}
