@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movie>
+    <name>Avengers: Endgame</name>
+    <runningMinutes>181</runningMinutes>
+    <characters>
+        <character>
+            <firstName>Tony</firstName>
+            <lastName>Stark</lastName>
+            <gender>M</gender>
+            <isHuman>Y</isHuman>
+        </character>
+        <character>
+            <firstName>Virginia</firstName>
+            <lastName>Potts</lastName>
+            <gender>F</gender>
+            <isHuman>Y</isHuman>
+        </character>
+        <character>
+            <firstName>Thor</firstName>
+            <lastName>Odinson</lastName>
+            <gender>M</gender>
+            <isHuman>N</isHuman>
+        </character>
+    </characters>
+</movie>

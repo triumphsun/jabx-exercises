@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jxb:bindings version="1.0"
+              xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <jxb:bindings schemaLocation="schema.xsd">
+        <jxb:schemaBindings>
+            <jxb:package name="com.suntri"/>
+        </jxb:schemaBindings>
+        <!-- ========== -->
+        <jxb:bindings node="xs:element[@name='movie']/xs:complexType/xs:sequence">
+            <jxb:bindings node="./xs:element[@name='runningMinutes']">
+                <jxb:javaType name="int" parseMethod="java.lang.Integer.decode" printMethod="java.lang.Integer.toString"/>
+            </jxb:bindings>
+            <jxb:bindings node="./xs:element[@name='characters']">
+                <jxb:property name="characters" collectionType="java.util.LinkedList"/>
+            </jxb:bindings>
+        </jxb:bindings>
+        <!-- ========== -->
+        <jxb:bindings node="xs:element[@name='character']/xs:complexType/xs:sequence">
+            <jxb:bindings node="./xs:element[@name='gender']">
+                <jxb:javaType name="com.suntri.jaxb.Gender" parseMethod="com.suntri.jaxb.Gender.parseMF" printMethod="com.suntri.jaxb.Gender.printMF"/>
+            </jxb:bindings>
+            <jxb:bindings node="./xs:element[@name='isHuman']">
+                <jxb:javaType name="boolean" parseMethod="com.suntri.jaxb.BooleanAdapter.parseYN" printMethod="com.suntri.jaxb.BooleanAdapter.printYN"/>
+            </jxb:bindings>
+        </jxb:bindings>
+    </jxb:bindings>
+</jxb:bindings>
